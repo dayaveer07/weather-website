@@ -10,7 +10,7 @@ function forecast(long,lat,callback){
      }
     else{
     
- callback(undefined,`${body.daily.data[0].summary} The temperature is ${body.currently.temperature}  and there are ${body.currently.precipProbability } % chances of rain. Min Temperature: ${body.daily.data[0].temperatureMin}, Max Temperature: ${body.daily.data[0].temperatureMax}`)
+ callback(undefined,`${body.daily.data[0].summary} The temperature is ${body.currently.temperature}  and there are ${body.currently.precipProbability } % chances of rain. Min Temperature: ${body.daily.data[0].temperatureLow}, Max Temperature: ${body.daily.data[0].temperatureHigh}`)
 }
 })
 }
