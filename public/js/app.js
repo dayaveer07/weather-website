@@ -9,6 +9,7 @@ weatherform.addEventListener('submit',(e)=>{
     const location=search.value
     message1.textContent="Loading..."
     message2.textContent=""
+    message3.textContent=""
     
     fetch('/weather?location='+location).then((response)=>{
     response.json().then((data)=>{
@@ -19,7 +20,7 @@ weatherform.addEventListener('submit',(e)=>{
        
     message2.textContent=data.forecast    
     message1.textContent=data.location
-    //console.log(data)
+    console.log(data)
 })
 
 })

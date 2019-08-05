@@ -47,6 +47,7 @@ app.get('/weather',(req,res)=>{
         }
     
     forecast(longlitude,latitude, (error, forecastdata)=>{
+        console.log(forecastdata)
         if(error){
             return res.send({
                 error})
@@ -54,7 +55,8 @@ app.get('/weather',(req,res)=>{
     res.send({
         forecast:forecastdata,
         location,
-        address:req.query.location
+        address:req.query.location,
+        
     })
     
     })
